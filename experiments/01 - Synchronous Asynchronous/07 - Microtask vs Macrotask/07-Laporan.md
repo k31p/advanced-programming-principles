@@ -20,19 +20,19 @@ JavaScript adalah bahasa pemrograman single-threaded yang menggunakan event loop
 
 Untuk memahami perbedaan dan dampak antara Microtask dan Macrotask, akan dilakukan eksperimen dengan langkah-langkah berikut:
 
-    1. Merancang skenario tes yang melibatkan eksekusi tugas synchronous, Microtask, dan Macrotask.
+1. Merancang skenario tes yang melibatkan eksekusi tugas synchronous, Microtask, dan Macrotask.
 
-    2. Menjalankan kode JavaScript dengan berbagai kombinasi Microtask dan Macrotask untuk mengamati urutan eksekusi.
+2. Menjalankan kode JavaScript dengan berbagai kombinasi Microtask dan Macrotask untuk mengamati urutan eksekusi.
 
-    3. Mencatat hasil eksekusi dalam urutan yang terjadi.
+3. Mencatat hasil eksekusi dalam urutan yang terjadi.
 
-    4. Menganalisis hasil untuk memahami bagaimana event loop memproses Microtask dan Macrotask dan dampaknya terhadap alur program.
+4. Menganalisis hasil untuk memahami bagaimana event loop memproses Microtask dan Macrotask dan dampaknya terhadap alur program.
 
 ## 4. Pelaksanaan Experiment
 
 Kode dibawah ini berisikan Microtask, Macrotask, dan Synchronous sebagai parameter perbandingan :
 
-    ```js
+```js
 console.log("Start of Test"); // kode synchronous
 
 setTimeout(() => {
@@ -41,39 +41,33 @@ setTimeout(() => {
 let promiseTask = new Promise((resolve, reject) => {resolve();})
 
 promiseTask.then(() => {
-    console.log("Microtask - Tested")}); // Microtask - asynchronous
+        console.log("Microtask - Tested")}); // Microtask - asynchronous
 
 console.log("End of Test"); // kode synchronous
-    ```
+```
 
 Langkah-Langkah Eksperimen:
 
-    1. Eksekusi Kode Synchronous:
+1. Eksekusi Kode Synchronous:
 
-    - Cetak "Start".
+    Cetak "Start".
 
-    - Cetak "End".
+    Cetak "End".
 
-    2. Penjadwalan Macrotask:
+2. Penjadwalan Macrotask: setTimeout() dijadwalkan untuk mencetak "Macrotask - setTimeout" setelah 0 ms, masuk ke antrian Macrotask.
 
-    setTimeout() dijadwalkan untuk mencetak "Macrotask - setTimeout" setelah 0 ms, masuk ke antrian Macrotask.
+3. Penjadwalan Microtask: Promise.resolve().then() dijadwalkan untuk mencetak "Microtask - Promise", masuk ke antrian Microtask.
 
-    3. Penjadwalan Microtask:
-
-    Promise.resolve().then() dijadwalkan untuk mencetak "Microtask - Promise", masuk ke antrian Microtask.
-
-    4. Pengamatan Urutan Eksekusi:
-
-    Setelah kode synchronous selesai dieksekusi, Microtask dieksekusi terlebih dahulu, kemudian diikuti oleh Macrotask.
+4. Pengamatan Urutan Eksekusi: Setelah kode synchronous selesai dieksekusi, Microtask dieksekusi terlebih dahulu, kemudian diikuti oleh Macrotask.
 
 Hasil Uji Coba :
 
-    ```js
+```js
 Start
 End
 Microtask - Promise
 Macrotask - setTimeout
-    ```
+```
 
 ## 5. Analisis Hasil Experiment
 
