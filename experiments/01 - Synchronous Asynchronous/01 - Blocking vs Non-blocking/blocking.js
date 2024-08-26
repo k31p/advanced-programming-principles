@@ -3,7 +3,7 @@ console.time('Blocking I/O Time');
 
 for (let i = 0; i < 10; i++) {
     console.time(`Read ${i + 1}`);
-    const data = fs.readFileSync('largefile.txt', 'utf8');
+    const data = fs.readFileSync('01 - Blocking vs Non-blocking/largefile.txt', 'utf8');
     console.timeEnd(`Read ${i + 1}`);
     console.log(`Read ${i + 1}:`, data.length, 'characters');
 }
