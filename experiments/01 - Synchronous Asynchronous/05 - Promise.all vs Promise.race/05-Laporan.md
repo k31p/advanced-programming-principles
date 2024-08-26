@@ -177,4 +177,8 @@ Error!
 
 ### Source Code
 
-[text](https://www.youtube.com/watch?v=LE_L9OAh6Hk) dengan beberapa modifikasi
+```js
+https://www.youtube.com/watch?v=LE_L9OAh6Hk
+```
+
+dengan beberapa modifikasi
