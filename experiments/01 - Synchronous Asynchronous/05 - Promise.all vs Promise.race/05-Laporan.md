@@ -174,3 +174,7 @@ Error!
 - Gunakan Promise.all jika Anda perlu menjalankan beberapa operasi yang semuanya harus berhasil sebelum melanjutkan.
 
 - Gunakan Promise.race jika Anda hanya membutuhkan hasil pertama dari sekumpulan promise, baik itu berhasil atau gagal.
+
+### Source Code
+
+[text](https://www.youtube.com/watch?v=LE_L9OAh6Hk) dengan beberapa modifikasi
