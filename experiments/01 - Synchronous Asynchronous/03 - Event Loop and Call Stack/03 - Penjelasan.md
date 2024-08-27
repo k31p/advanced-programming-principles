@@ -53,6 +53,10 @@ Untuk melakukan eksperimen, gunakan browser debugger untuk membuka file `sample.
 </html>
 ```
 
+Dan berikut adalah hasil dari `case_4_combined.js`
+
+![Output dari case_4_combined.js](./output_case_4.png)
+
 Klik link di bawah ini untuk melihat setiap file JavaScript yang ada pada experimen ini
 
 - [case_1_synchronous_function.js](case_1_synchronous_function.js)
