@@ -4,7 +4,7 @@ async function fetchData() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
           // Simulasi error
-          reject(new Error('Terjadi kesalahan saat mengambil data!'));
+            reject(new Error('Terjadi kesalahan saat mengambil data!'));
           // resolve('Data fetched');
         }, 1000);
     });
