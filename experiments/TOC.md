@@ -10,6 +10,6 @@
     - [07 - Microtask vs Macrotask](./01%20-%20Synchronous%20Asynchronous/07%20-%20Microtask%20vs%20Macrotask/07-Laporan.md)
     - [08 - Error Handling with Async](./01%20-%20Synchronous%20Asynchronous/08%20-%20Error%20Handling%20with%20Async/08-Laporan.md)
     - [09 - setTimeout vs setImmediate vs process.nextTick](./01%20-%20Synchronous%20Asynchronous/09%20-%20setTimeout%20vs%20setImmediate%20vs%20process.nextTick/09-Laporan.md)
-    - 10 - Race Condition dalam Skenario Asynchronous
+    - [10 - Race Condition dalam Skenario Asynchronous](./01%20-%20Synchronous%20Asynchronous/10%20-%20Race%20Condition%20dalam%20Skenario%20Asynchronous/laporan.md)
     - [11 - Streaming vs Buffering on  IO](./01%20-%20Synchronous%20Asynchronous/11%20-%20Streaming%20vs%20Buffering%20on%20%20IO/streaming-buffering-io-operation.md)
-    - 12 - Worker Threads vs Web Workers
+    - [12 - Worker Threads vs Web Workers](./01%20-%20Synchronous%20Asynchronous/12%20-%20Worker%20Threads%20vs%20Web%20Workers/laporan.md)
