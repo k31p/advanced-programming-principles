@@ -103,8 +103,6 @@ Performa dalam konteks ini merujuk pada dua aspek utama: kecepatan eksekusi (wak
 **Time:** 3.069s  
 **RSS:** 902.508.544 bytes (~902.5 MB)
 
-Berdasarkan hasil eksperimen yang Anda sajikan, berikut adalah analisis dan pembahasan untuk bagian baru:
-
 ## Hasil Analisis dan Pembahasan
 
 ### 1. Waktu Eksekusi

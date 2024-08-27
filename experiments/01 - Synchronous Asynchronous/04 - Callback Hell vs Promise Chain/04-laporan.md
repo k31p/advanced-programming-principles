@@ -38,11 +38,82 @@ Promise Chain adalah metode untuk menangani operasi asinkron secara berurutan de
 
 **Callback.js**
 
+```javascript
+function fetchData(callback) {
+    setTimeout(() => {
+        console.log('Data fetched');
+        callback();
+    }, 1000);
+}
+
+function processData(callback) {
+    setTimeout(() => {
+        console.log('Data processed');
+        callback();
+    }, 1000);
+}
+
+function displayData(callback) {
+    setTimeout(() => {
+        console.log('Data displayed');
+        callback();
+    }, 1000);
+}
+
+fetchData(() => {
+    processData(() => {
+        displayData(() => {
+            console.log('All done!');
+        });
+    });
+});
+```
+
 ![Hasil Callback.js](image.png)
 
 Pada file Callback.js, hasil menunjukkan bahwa operasi asinkron berhasil dieksekusi, namun struktur kode yang dihasilkan terlihat sangat kompleks dan sulit diikuti. Callback yang bersarang dalam beberapa tingkat menghasilkan pola piramida yang menyebabkan apa yang disebut sebagai "Callback Hell". Hal ini membuat kode menjadi sulit untuk dibaca, diuji, dan di-debug. Masalah ini semakin nyata ketika ada kebutuhan untuk menambahkan operasi tambahan atau melakukan penanganan error di beberapa tempat. Setiap tambahan callback hanya memperburuk masalah, membuat kode menjadi semakin tidak terkelola.
 
 **Promise.js**
+
+```javascript
+function fetchData() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log('Data fetched');
+            resolve();
+        }, 1000);
+    });
+}
+
+function processData() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log('Data error');
+            resolve();
+        }, 1000);
+    });
+}
+
+function displayData() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log('Data displayed');
+            resolve();
+        }, 1000);
+    });
+}
+
+// Menjalankan fungsi secara berurutan dengan promise chain
+fetchData()
+    .then(() => processData())
+    .then(() => displayData())
+    .then(() => {
+        console.log('All done!');
+    })
+    .catch((error) => {
+        console.error('An error occurred:', error);
+    });
+```
 
 ![Hasil Promise.js](image-1.png)
 

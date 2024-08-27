@@ -1,10 +1,10 @@
 // Fungsi asynchronous yang dapat menghasilkan error
-async function fetchData() {
+function fetchData() {
     // Simulasi operasi asynchronous
     return new Promise((resolve, reject) => {
         setTimeout(() => {
           // Simulasi error
-          reject(new Error('Terjadi kesalahan saat mengambil data!'));
+            reject(new Error('Terjadi kesalahan saat mengambil data!'));
           // resolve('Data fetched');
         }, 1000);
     });
