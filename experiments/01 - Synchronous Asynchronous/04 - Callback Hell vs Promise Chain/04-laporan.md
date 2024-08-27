@@ -35,16 +35,18 @@ Promise Chain adalah metode untuk menangani operasi asinkron secara berurutan de
 3. Jalankan masing masing file menggunakan Node.js di terminal untuk melihat perbedaan dalam alur eksekusi dan bagaimana masing-masing pendekatan menangani operasi asinkron.
 
 4. Analisis Hasil
-Callback.js
+
+**Callback.js**
 
 ![Hasil Callback.js](image.png)
 
-    Pada file Callback.js, hasil menunjukkan bahwa operasi asinkron berhasil dieksekusi, namun struktur kode yang dihasilkan terlihat sangat kompleks dan sulit diikuti. Callback yang bersarang dalam beberapa tingkat menghasilkan pola piramida yang menyebabkan apa yang disebut sebagai "Callback Hell". Hal ini membuat kode menjadi sulit untuk dibaca, diuji, dan di-debug. Masalah ini semakin nyata ketika ada kebutuhan untuk menambahkan operasi tambahan atau melakukan penanganan error di beberapa tempat. Setiap tambahan callback hanya memperburuk masalah, membuat kode menjadi semakin tidak terkelola.
-Promise.js
+Pada file Callback.js, hasil menunjukkan bahwa operasi asinkron berhasil dieksekusi, namun struktur kode yang dihasilkan terlihat sangat kompleks dan sulit diikuti. Callback yang bersarang dalam beberapa tingkat menghasilkan pola piramida yang menyebabkan apa yang disebut sebagai "Callback Hell". Hal ini membuat kode menjadi sulit untuk dibaca, diuji, dan di-debug. Masalah ini semakin nyata ketika ada kebutuhan untuk menambahkan operasi tambahan atau melakukan penanganan error di beberapa tempat. Setiap tambahan callback hanya memperburuk masalah, membuat kode menjadi semakin tidak terkelola.
+
+**Promise.js**
 
 ![Hasil Promise.js](image-1.png)
 
-    Pada file Promise.js, operasi asinkron yang sama dilakukan, tetapi kali ini menggunakan Promise Chain. Hasil yang dihasilkan sama seperti pada Callback.js, namun struktur kode jauh lebih rapi dan mudah diikuti. Dengan menggunakan chaining pada Promise, setiap operasi asinkron diatur dalam urutan yang lebih linear dan terstruktur. Keuntungan besar dari pendekatan ini adalah kemampuan untuk menangani error di satu tempat dengan menggunakan .catch() di akhir chain. Hal ini tidak hanya meningkatkan keterbacaan kode, tetapi juga membuatnya lebih mudah di-debug dan dipelihara. Selain itu, menambahkan operasi tambahan dalam chain ini jauh lebih mudah dan tidak mengorbankan keterbacaan kode.
+Pada file Promise.js, operasi asinkron yang sama dilakukan, tetapi kali ini menggunakan Promise Chain. Hasil yang dihasilkan sama seperti pada Callback.js, namun struktur kode jauh lebih rapi dan mudah diikuti. Dengan menggunakan chaining pada Promise, setiap operasi asinkron diatur dalam urutan yang lebih linear dan terstruktur. Keuntungan besar dari pendekatan ini adalah kemampuan untuk menangani error di satu tempat dengan menggunakan .catch() di akhir chain. Hal ini tidak hanya meningkatkan keterbacaan kode, tetapi juga membuatnya lebih mudah di-debug dan dipelihara. Selain itu, menambahkan operasi tambahan dalam chain ini jauh lebih mudah dan tidak mengorbankan keterbacaan kode.
 
 Kesimpulan:
 
