@@ -1,5 +1,5 @@
 // Fungsi asynchronous yang dapat menghasilkan error
-async function fetchData() {
+function fetchData() {
     // Simulasi operasi asynchronous
     return new Promise((resolve, reject) => {
         setTimeout(() => {
